@@ -37,7 +37,7 @@ def take_screenshot(message):
         bot.send_document(message.chat.id, open('./screenshot.png', 'rb'))
     else:
         bot.send_message(message.chat.id,
-                         'Неа, ссылка должна начинатся с "https"\n'
+                         'Неа, ссылка должна начинатся с "https" или "http"\n'
                          'Попробуй еще раз😋\n'
                          'Если не выйдет, тогда жми сюда→/help')
 
