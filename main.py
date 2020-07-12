@@ -21,7 +21,7 @@ def comm_help(message):
 @bot.message_handler(content_types=['text'])
 def take_screenshot(message):
     message_url = str(message.text)
-    if message_url.startswith('https'):
+    if message_url.startswith('https') or message_url.startswith('http'):
         bot.send_message(message.chat.id, 'Одну секунду, делаю скрин...')
         d_cap = dict(DesiredCapabilities.PHANTOMJS)
         d_cap["phantomjs.page.settings.userAgent"] = (
